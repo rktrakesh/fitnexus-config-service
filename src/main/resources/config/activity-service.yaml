@@ -1,0 +1,29 @@
+server:
+  port: 7072
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/fitnexus_activities
+      database: fitnexus_activities
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  banner:
+    location: banner.txt
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+
+rabbitmq:
+  exchange:
+    name: fitnexus.exchange
+  queue:
+    name: activity.queue
+  routing:
+    key: activity.tracking
