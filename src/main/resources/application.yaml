@@ -8,5 +8,7 @@ spring:
       server:
         native:
           search-locations: classpath:/config
+  banner:
+    location: banner.txt
 server:
   port: 8888
